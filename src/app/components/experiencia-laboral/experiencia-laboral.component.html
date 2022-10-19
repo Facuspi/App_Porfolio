@@ -1,0 +1,14 @@
+<div class="tarjeta" id="tarjeta_3">
+    <i class="fa fa-plus-square fa-lg" aria-hidden="true" id="boton_edit"></i>
+    <h3>Experiencia Laboral</h3>                
+    <ul>
+        <li id="exp_1" *ngFor="let experiencia of experiencialist">
+            <i class="fa fa-trash-o fa-lg" aria-hidden="true" id="boton_edit" onclick="borrar_experiencia_1()"></i>
+            <i class="fa fa-pencil fa-lg" aria-hidden="true" id="boton_edit"></i>                        
+            <h4>{{experiencia.position}}</h4>
+            <h5>{{experiencia.company}}</h5>
+            <h5><time>{{experiencia.start}}</time> -<time>{{experiencia.end}}</time> </h5>                        
+            <p>{{experiencia.about}}</p>                        
+        </li>        
+    </ul>
+  </div>

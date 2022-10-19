@@ -1,0 +1,14 @@
+<div class="tarjeta" id="tarjeta_4">
+    <i class="fa fa-plus-square fa-lg" aria-hidden="true" id="boton_edit"></i>
+    <h3>Estudios</h3>                
+    <ul>
+        <li id="est_1" *ngFor="let estudio of estudiosList">
+            <i class="fa fa-trash-o fa-lg" aria-hidden="true" id="boton_edit" onclick="borrar_estudio_1()"></i>
+            <i class="fa fa-pencil fa-lg" aria-hidden="true" id="boton_edit"></i>
+            <h5>{{estudio.name}}</h5>
+            <p><time>{{estudio.start}}</time> -  <time>{{estudio.end}}</time> <br>
+            {{estudio.tittle}}</p>
+        </li>
+              
+    </ul>
+  </div>

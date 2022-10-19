@@ -1,0 +1,14 @@
+<div class="tarjeta" id="tarjeta_5">
+    <i class="fa fa-plus-square fa-lg" aria-hidden="true" id="boton_edit"></i>
+    <h3>Fortalezas y debilidades</h3>
+       <li *ngFor="let fyd of fortydebList"> 
+            <div id="fyd_1">
+            <h6>{{fyd.name}}</h6>
+                <i class="fa fa-trash-o fa-lg" aria-hidden="true" id="boton_edit" onclick="borrar_fyd_1()"></i>
+                <i class="fa fa-pencil fa-lg" aria-hidden="true" id="boton_edit"></i>
+                <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [ngStyle]="{'width': fyd.progress}"  aria-valuemin="0" aria-valuemax="100">{{fyd.progress}}</div>
+                </div>
+            </div>
+        </li> 
+ </div>

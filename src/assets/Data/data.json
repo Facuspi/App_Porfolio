@@ -1,0 +1,62 @@
+{
+    "name": "Facundo Nehuen Spinelli",
+    "backImage": "./assets/Imagenes/banner.png",
+    "image": "./assets/Imagenes/foto_perfil.jpg",
+    "position": "Programador Web Full Stack",
+    "ubication": "Buenos Aires",
+    "country": "Argentina", 
+    "about":"Me considero una persona introvertida, que rápidamente adquiere confianza en el trabajo a través del aprendizaje. Soy responsable y organizado ejecutando tareas. Puedo trabajar en equipo siempre enfocado en alcanzar los objetivos propuestos. Me gusta analizar primero el problema y luego tomar decisiones. Como todo millennial, la PC, internet y redes forma parte de mi vida desde mi infancia y la considero una herramienta fundamental.",
+    "facebook":"https://www.facebook.com/facunehu",
+    "instagram":"https://www.instagram.com/facu_nehu",
+    "job":[{
+        "position":"Atención al cliente / administrativo",
+        "company":"Elemento Corte Laser",
+        "start":"2021",
+        "end":"2022",
+        "about":"Atención al cliente a través de WhatsApp, recepción de pedidos y asesoramiento. Gestión de agenda de pedidos. Manejo de Excel. Control de stock de mercadería, control de envíos y manejo básico de redes sociales."
+    },
+    {
+        "position":"Actor/Animador Infantil",
+        "company":"Nunca Jamás Producciones",
+        "start":"2014",
+        "end":"2022",
+        "about":"Actor y animación en funciones para escuelas y teatros. Sonidista. Coordinador de grupos de actores.Promoción y venta de funciones. Carga, descarga y armado de escenografía." 
+    },
+    {
+        "position":"Operario",
+        "company":"Carpintería “Rama Madera”",
+        "start":"2020",
+        "end":"2021",
+        "about":"Realización en madera de diferentes elementos decorativos. Lijado, encerado, encolado y empaque de los productos realizados."
+    }],
+    "school":[{
+        "name":"“Argentina Programa” del Ministerio de Desarrollo Productivo de la Nación",
+        "start":"2021",
+        "end":"2022",
+        "tittle":"Programación Web Full-Stack Junior"
+    }, {
+        "name":"Escuela Municipal de Formación Actoral “Pedro Escudero”",
+        "start":"2012",
+        "end":"2015",
+        "tittle":"Actuación"
+    }, {
+        "name":"Instituto Parroquial Nuestra Señora del Buen Viaje",
+        "start":"2007",
+        "end":"2009",
+        "tittle":"Bachiller en Economía Y Gestión de las Organizaciones"
+    }],
+    "aptitudes": [{
+        "name":"Autogestión",
+        "progress":"75%"
+    },{
+        "name":"Responsabilidad",
+        "progress":"70%"
+    },{
+        "name":"Cooperación",
+        "progress":"60%"
+    },{
+        "name":"Autonomía",
+        "progress":"50%"
+    }],
+    "proyect":"Portfolio Web"
+}
