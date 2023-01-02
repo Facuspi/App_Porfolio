@@ -1,9 +1,77 @@
 <div class="tarjeta" id="tarjeta_1">
     <img [src]="miPorfolio.backImage" id="banner">
-    <i class="fa fa-pencil fa-lg" aria-hidden="true" id="boton_edit"></i>
+    <section id="editarFoto">
+    <button type="button" class="btn btn-light" id="boton_edit" data-bs-toggle="modal" data-bs-target="#editFotoModal"> <i class="fa-solid fa-camera fa-lg"></i></button>
+    </section>
+    <section id="editDatos">
+    <button type="button" class="btn btn-light" id="boton_edit" data-bs-toggle="modal" data-bs-target="#editarModal"> <i class="fa-solid fa-pen fa-lg"></i></button>
+    </section>    
     <img [src]="miPorfolio.image" id="foto_perfil" >
-    <i class="fa fa-camera fa-lg" aria-hidden="true" id="boton_edit" onclick="cambiar_foto()"></i>
+   
+    
+    
     <h2> {{miPorfolio.name}} </h2>
     <h4>{{miPorfolio.position}} <br>
        {{miPorfolio.ubication}}, {{miPorfolio.country}}</h4>
   </div>
+
+  <!-- Modal editar datos-->
+<div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="editarModalLabel">Editar datos personales</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="inputNombre" class="form-label">Nombre y apellido</label>
+                  <input type="text" class="form-control" id="inputNombre" value={{miPorfolio.name}}>
+                  
+                <div class="mb-3">
+                  <label for="inputPosition" class="form-label">Posicion</label>
+                  <input type="text" class="form-control" id="inputPosition" value={{miPorfolio.position}}>
+                </div>
+                <label for="inputCiudad" class="form-label">Ciudad</label>
+                  <input type="text" class="form-control" id="inputCiudad" value={{miPorfolio.ubication}}>
+                  
+                <label for="inputPais" class="form-label">País</label>
+                  <input type="text" class="form-control" id="inputPais" value={{miPorfolio.country}}>
+                
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Editar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Foto de perfil-->
+<div class="modal fade" id="editFotoModal" tabindex="-1" aria-labelledby="editFotoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="editFotoModalLabel">Editar foto de perfil</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="inputURL" class="form-label">URL foto de perfil</label>
+                  <input type="url" class="form-control" id="inputURL" value={{miPorfolio.image}}>
+                  <label for="inputURL" class="form-label">URL banner</label>
+                  <input type="url" class="form-control" id="inputURL" value={{miPorfolio.backImage}}>
+                  
+                </div>     
+             </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Editar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

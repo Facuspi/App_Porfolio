@@ -1,10 +1,30 @@
 <div class="tarjeta" id="tarjeta_2">
-    <i class="fa fa-pencil fa-lg" aria-hidden="true" id="boton_edit" onclick="cambiar_parrafo()"></i>
+    <section id="editSobreMi">
+    <button type="button" class="btn btn-light" id="boton_edit" data-bs-toggle="modal" data-bs-target="#editSobreMiModal"> <i class="fa-solid fa-pen fa-lg"></i></button>
+    </section>
     <h3>Sobre mí</h3>                
     <p id="text_acerca">{{miPorfolio.about}}</p>
-    <div>
-        <input id="edit_texto" type="text" oninput="cambiar_texto(this.value)">
-        <i class="fa fa-check-square fa-lg" aria-hidden="true" id="ocultar_input" onclick="ocultar_input()"></i>                   
-        
+</div>
+
+<!-- Modal sobre mi -->
+<div class="modal fade" id="editSobreMiModal" tabindex="-1" aria-labelledby="editSobreMiModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="editSobreMiModalLabel">Editar "Sobre Mí"</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                     <textarea class="form-control" id="about" rows="3">{{miPorfolio.about}}</textarea>
+                  </div>
+                
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Editar</button>
+        </div>
+      </div>
     </div>
   </div>

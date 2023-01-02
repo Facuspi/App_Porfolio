@@ -1,14 +1,83 @@
-<div class="tarjeta" id="tarjeta_5">
-    <i class="fa fa-plus-square fa-lg" aria-hidden="true" id="boton_edit"></i>
+<div class="tarjeta" >
+    <section id="agregarFyD">
+      <button type="button" class="btn btn-light" id="boton_edit" data-bs-toggle="modal" data-bs-target="#nuevaFyDModal"><i class="fa-solid fa-plus fa-lg"></i></button>
+    </section>
     <h3>Fortalezas y debilidades</h3>
        <li *ngFor="let fyd of fortydebList"> 
-            <div id="fyd_1">
+            <div>
             <h6>{{fyd.name}}</h6>
-                <i class="fa fa-trash-o fa-lg" aria-hidden="true" id="boton_edit" onclick="borrar_fyd_1()"></i>
-                <i class="fa fa-pencil fa-lg" aria-hidden="true" id="boton_edit"></i>
-                <div class="progress">
+            <section id="editFyD">
+            <button type="button" class="btn btn-light" id="boton_edit" data-bs-toggle="modal" data-bs-target="#eliminarModal"> <i class="fa-solid fa-trash"></i></button> 
+            <button type="button" class="btn btn-light" id="boton_edit" data-bs-toggle="modal" data-bs-target="#editarFyDModal"> <i class="fa-solid fa-pen fa-lg"></i></button> 
+             </section>   
+            <div class="progress">
                 <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [ngStyle]="{'width': fyd.progress}"  aria-valuemin="0" aria-valuemax="100">{{fyd.progress}}</div>
                 </div>
             </div>
         </li> 
  </div>
+ <!-- Modal nueva fyd -->
+<div class="modal fade" id="nuevaFyDModal" tabindex="-1" aria-labelledby="nuevaFyDModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="nuevaFyDModalLabel">Nueva aptitud</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="inputAptitud" class="form-label">Aptitud</label>
+                <input type="text" class="form-control" id="inputAptitud">
+              </div>
+              <div class="mb-3">
+                <label for="inputPorcentaje" class="form-label">Porcentaje</label>
+                <input type="number" class="form-control" id="inputPorcentaje">
+              </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal eliminar elemento-->
+<div class="modal fade" id="eliminarModal" tabindex="-1" aria-labelledby="eliminarModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="eliminarModalLabel">¿Desea eliminar este elemento?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Si</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal editar fyd -->
+    <div class="modal fade" id="editarFyDModal" tabindex="-1" aria-labelledby="editarFyDModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="editarFyDModalLabel">Editar experiencia Laboral</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="inputAptitud" class="form-label">Aptitud</label>
+                    <input type="text" class="form-control" id="inputAptitud">
+                  </div>
+                  <div class="mb-3">
+                    <label for="inputPorcentaje" class="form-label">Porcentaje</label>
+                    <input type="number" class="form-control" id="inputPorcentaje">
+                  </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Editar</button>
+            </div>
+          </div>
+        </div>
+      </div>

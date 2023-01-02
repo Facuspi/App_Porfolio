@@ -1,14 +1,108 @@
 <div class="tarjeta" id="tarjeta_3">
-    <i class="fa fa-plus-square fa-lg" aria-hidden="true" id="boton_edit"></i>
+    <section id="agregarExperiencia">
+    <button type="button" class="btn btn-light" id="boton_edit" data-bs-toggle="modal" data-bs-target="#agregarExpModal"><i class="fa-solid fa-plus fa-lg"></i></button> 
+    </section>
     <h3>Experiencia Laboral</h3>                
     <ul>
-        <li id="exp_1" *ngFor="let experiencia of experiencialist">
-            <i class="fa fa-trash-o fa-lg" aria-hidden="true" id="boton_edit" onclick="borrar_experiencia_1()"></i>
-            <i class="fa fa-pencil fa-lg" aria-hidden="true" id="boton_edit"></i>                        
+        <li  *ngFor="let experiencia of experiencialist">
+            <section id="editExperincia">
+            <button type="button" class="btn btn-light" id="boton_edit" data-bs-toggle="modal" data-bs-target="#eliminarModal"> <i class="fa-solid fa-trash"></i></button> 
+            <button type="button" class="btn btn-light" id="boton_edit" data-bs-toggle="modal" data-bs-target="#editarExpModal"> <i class="fa-solid fa-pen fa-lg"></i></button>                        
+            </section>
             <h4>{{experiencia.position}}</h4>
             <h5>{{experiencia.company}}</h5>
             <h5><time>{{experiencia.start}}</time> -<time>{{experiencia.end}}</time> </h5>                        
             <p>{{experiencia.about}}</p>                        
         </li>        
     </ul>
+  </div>
+
+  <!-- Modal agregar experiencia -->
+<div class="modal fade" id="agregarExpModal" tabindex="-1" aria-labelledby="agregarExpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="agregarExpModalLabel">Nueva experiencia laboral</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="inputPuesto" class="form-label">Puesto/Rol</label>
+                <input type="text" class="form-control" id="inputPuesto">
+            </div>
+            <div class="mb-3">
+                <label for="inputEmpresa" class="form-label">Empresa</label>
+                <input type="text" class="form-control" id="inputEmpresa">
+            </div>
+            <div class="mb-3">
+                <label for="inputIngreso" class="form-label">Desde</label>
+                <input type="date" class="form-control" id="inputIngreso">
+            </div>
+            <div class="mb-3">
+                <label for="inputFinal" class="form-label">Hasta</label>
+                <input type="date" class="form-control" id="inputFinal">
+            </div>
+            <div class="mb-3">
+                <label for="inputDesc" class="form-label">Descripción</label>
+                <textarea class="form-control" id="inputDesc" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal eliminar elemento-->
+<div class="modal fade" id="eliminarModal" tabindex="-1" aria-labelledby="eliminarModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="eliminarModalLabel">¿Desea eliminar este elemento?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Si</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal editar experiencia -->
+  <div class="modal fade" id="editarExpModal" tabindex="-1" aria-labelledby="editarExpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="editarExpModalLabel">Editar experiencia Laboral</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="inputPuesto" class="form-label">Puesto/Rol</label>
+                <input type="text" class="form-control" id="inputPuesto">
+            </div>
+            <div class="mb-3">
+                <label for="inputEmpresa" class="form-label">Empresa</label>
+                <input type="text" class="form-control" id="inputEmpresa">
+            </div>
+            <div class="mb-3">
+                <label for="inputIngreso" class="form-label">Desde</label>
+                <input type="date" class="form-control" id="inputIngreso">
+            </div>
+            <div class="mb-3">
+                <label for="inputFinal" class="form-label">Hasta</label>
+                <input type="date" class="form-control" id="inputFinal">
+            </div>
+            <div class="mb-3">
+                <label for="inputDesc" class="form-label">Descripción</label>
+                <textarea class="form-control" id="inputDesc" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Editar</button>
+        </div>
+      </div>
+    </div>
   </div>

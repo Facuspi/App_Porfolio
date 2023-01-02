@@ -1,0 +1,14 @@
+.tarjeta {
+    
+    padding: 25px;
+}
+
+.tarjeta h6 {
+    margin-top: 5px;
+    margin-left: 50%;
+}
+
+.progress {
+    margin-left: 400px;
+    margin-right: 400px;
+}

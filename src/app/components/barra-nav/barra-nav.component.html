@@ -1,9 +1,38 @@
 <div id="barra_nav">
     <img src="./assets/Imagenes/APLogo.png" id="logo_AP" > 
     <h4>#YoProgramo</h4>
-   <div id="RRSS">
-    <a [href]="miPorfolio.facebook" target="_BLANCK"><img src="./assets/Imagenes/facebook.png" class="logo_RRSS"></a>
-    <a [href]="miPorfolio.instagram" target="_BLANCK"><img src="./assets/Imagenes/instagram.png" class="logo_RRSS"></a>
-    <button id="boton_login" type="button" class="btn btn-outline-light">Login</button>
-    </div>  
+    <div id="RRSS">
+      <a [href]="miPorfolio.github" target="_BLANCK" class="logo_RRSS"><i class="fa-brands fa-github fa-2xl"></i></a>
+  
+    <button id="boton_login" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar Sesión</button>
+    
+    
+    <button id="boton_login" type="button" class="btn btn-outline-light">Cerrar Sesion</button>
+    
+    </div> 
 </div>
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="loginModalLabel">Iniciar Sesión</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
